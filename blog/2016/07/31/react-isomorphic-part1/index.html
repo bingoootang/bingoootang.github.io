@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>React 同构开发（一） | Bingooo.Tang 的日志</title>
+    <meta name="description" content="react 同构开发总结">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="preload" href="/assets/css/0.styles.45fd1eb4.css" as="style"><link rel="preload" href="/assets/js/app.1a92a99b.js" as="script"><link rel="preload" href="/assets/js/2.4bb95436.js" as="script"><link rel="preload" href="/assets/js/18.38e91cd9.js" as="script"><link rel="preload" href="/assets/js/9.60a9ad14.js" as="script"><link rel="prefetch" href="/assets/js/10.ff19f3cc.js"><link rel="prefetch" href="/assets/js/11.e260adce.js"><link rel="prefetch" href="/assets/js/12.e1d4dc76.js"><link rel="prefetch" href="/assets/js/13.3780b65b.js"><link rel="prefetch" href="/assets/js/14.821eca39.js"><link rel="prefetch" href="/assets/js/15.947a489c.js"><link rel="prefetch" href="/assets/js/16.31117fc6.js"><link rel="prefetch" href="/assets/js/17.aa761a41.js"><link rel="prefetch" href="/assets/js/19.2f0ddeb0.js"><link rel="prefetch" href="/assets/js/20.98a05b39.js"><link rel="prefetch" href="/assets/js/21.12bee07e.js"><link rel="prefetch" href="/assets/js/22.825b5c65.js"><link rel="prefetch" href="/assets/js/23.5a7523f8.js"><link rel="prefetch" href="/assets/js/24.d4db672e.js"><link rel="prefetch" href="/assets/js/25.9dc639ba.js"><link rel="prefetch" href="/assets/js/26.bb89ef52.js"><link rel="prefetch" href="/assets/js/27.9b952333.js"><link rel="prefetch" href="/assets/js/28.36b12119.js"><link rel="prefetch" href="/assets/js/29.b3fc89ab.js"><link rel="prefetch" href="/assets/js/3.914428ae.js"><link rel="prefetch" href="/assets/js/30.8403f552.js"><link rel="prefetch" href="/assets/js/31.3a71fc7c.js"><link rel="prefetch" href="/assets/js/32.f63547d0.js"><link rel="prefetch" href="/assets/js/33.30c37fb4.js"><link rel="prefetch" href="/assets/js/34.b1e97f3f.js"><link rel="prefetch" href="/assets/js/35.ab2a7a8c.js"><link rel="prefetch" href="/assets/js/36.5d422d5b.js"><link rel="prefetch" href="/assets/js/37.839e7d79.js"><link rel="prefetch" href="/assets/js/38.72e8bf2f.js"><link rel="prefetch" href="/assets/js/39.9a05368b.js"><link rel="prefetch" href="/assets/js/4.5c559b86.js"><link rel="prefetch" href="/assets/js/40.a8400673.js"><link rel="prefetch" href="/assets/js/41.ead2592b.js"><link rel="prefetch" href="/assets/js/42.2b99ba39.js"><link rel="prefetch" href="/assets/js/43.340f4287.js"><link rel="prefetch" href="/assets/js/44.6bf6391c.js"><link rel="prefetch" href="/assets/js/45.c33e2690.js"><link rel="prefetch" href="/assets/js/46.acfb4c4c.js"><link rel="prefetch" href="/assets/js/47.0d284677.js"><link rel="prefetch" href="/assets/js/48.7e5faf9d.js"><link rel="prefetch" href="/assets/js/49.70243ee5.js"><link rel="prefetch" href="/assets/js/5.4f064dd5.js"><link rel="prefetch" href="/assets/js/50.a70d1e3a.js"><link rel="prefetch" href="/assets/js/51.54705e9f.js"><link rel="prefetch" href="/assets/js/52.5e8b3d7e.js"><link rel="prefetch" href="/assets/js/53.03656bc8.js"><link rel="prefetch" href="/assets/js/54.d3b3024e.js"><link rel="prefetch" href="/assets/js/55.b8b66fcf.js"><link rel="prefetch" href="/assets/js/56.bcc27a01.js"><link rel="prefetch" href="/assets/js/57.dd12e611.js"><link rel="prefetch" href="/assets/js/6.8113e0b5.js"><link rel="prefetch" href="/assets/js/7.222800b2.js"><link rel="prefetch" href="/assets/js/8.84f16d44.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.45fd1eb4.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Bingooo.Tang 的日志</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link router-link-active">博客</a></div><div class="nav-item"><a href="/tutorials/" class="nav-link">教程</a></div><div class="nav-item"><a href="/tools/" class="nav-link">工具</a></div> <a href="https://github.com/bingoootang" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link router-link-active">博客</a></div><div class="nav-item"><a href="/tutorials/" class="nav-link">教程</a></div><div class="nav-item"><a href="/tools/" class="nav-link">工具</a></div> <a href="https://github.com/bingoootang" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <!----> </aside> <main class="page"> <div class="content default"><h1 id="react-同构开发（一）"><a href="#react-同构开发（一）" aria-hidden="true" class="header-anchor">#</a> React 同构开发（一）</h1> <p>为什么要做同构？要回答这个问题，首先要问什么是同构。所谓同构，顾名思义就是同一套代码，既可以运行在客户端（浏览器），又可以运行在服务器端（node）。</p> <p>我们知道，在前端的开发过程中，我们一般都会有一个<code>index.html</code>, 在这个文件中写入页面的基本内容（静态内容），然后引入JavaScript脚本根据用户的操作更改页面的内容（数据）。在性能优化方面，通常我们所说的种种优化措施也都是在这个基础之上进行的。在这个模式下，前端所有的工作似乎都被限制在了这一亩三分地之上。</p> <p>那么同构给了我们什么样的不同呢？前面说到，在同构模式下，客户端的代码也可以运行在服务器上。换句话说，我们在服务器端就可以将不同的数据组装成页面返回给客户端（浏览器）。这给页面的性能，尤其是首屏性能带来了巨大的提升可能。另外，在SEO等方面，同构也提供了极大的便利。除此以外，在整个开发过程中，同构会极大的降低前后端的沟通成本，后端更加专注于业务模型，前端也可以专注于页面开发，中间的数据转换大可以交给node这一层来实现，省去了很多来回沟通的成本。</p> <h2 id="基于react的同构开发"><a href="#基于react的同构开发" aria-hidden="true" class="header-anchor">#</a> 基于React的同构开发</h2> <p>说了这么多，如何做同构开发呢？<br>
+这还得归功于 React提供的服务端渲染。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>ReactDOMServer.renderToString  
+ReactDOMServer.renderToStaticMarkup
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>不同于 <code>ReactDom.render</code>将DOM结构渲染到页面, 这两个函数将虚拟DOM在服务端渲染为一段字符串，代表了一段完整的HTML结构，最终以html的形式吐给客户端。</p> <p>下面看一个简单的例子：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>// 定义组件 
+import React, { Component, PropTypes } from 'react';
+
+class News extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    var {data} = this.props;
+    return &lt;div className=&quot;item&quot;&gt;
+      &lt;a href={data.url}&gt;{ data.title }&lt;/a&gt;
+    &lt;/div&gt;;
+  }
+}
+
+export default News;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><p>我们在客户端，通常通过如下方式渲染这个组件：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>// 中间省略了很多其他内容，例如redux等。
+let data = {url: 'http://www.taobao.com', title: 'taobao'}
+ReactDom.render(&lt;News data={data} /&gt;, document.getElementById(&quot;container&quot;));
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>在这个例子中我们写死了数据，通常情况下，我们需要一个异步请求拉取数据，再将数据通过props传递给News组件。这时候的写法就类似于这样：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>Ajax.request({params, success: function(data) {
+  ReactDom.render(&lt;News data={data} /&gt;, document.getElementById(&quot;container&quot;));  
+}});
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>这时候，异步的时间就是用户实际等待的时间。</p> <p>那么，在同构模式下，我们怎么做呢？</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>// 假设我们的web服务器使用的是KOA，并且有这样的一个controller  
+function* newsListController() {
+  
+  const data = yield this.getNews({params});
+
+  const data = {
+    'data': data
+  };
+  
+  this.body = ReactDOMServer.renderToString(News(data));
+};
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>这样的话，我么在服务端就生成了页面的所有静态内容，直接的效果就是减少了因为首屏数据请求导致的用户的等待时间。除此以外，在禁用JavaScript的浏览器中，我们也可以提供足够的数据内容了。</p> <h2 id="什么原理"><a href="#什么原理" aria-hidden="true" class="header-anchor">#</a> 什么原理</h2> <p>其实，react同构开发并没有上面的例子那么简单。上面的例子只是为了说明服务端渲染与客户端渲染的基本不同点。其实，及时已经在服务端渲染好了页面，我们还是要在客户端重新使用ReactDom.render函数在render一次的。因为所谓的服务端渲染，仅仅是渲染静态的页面内容而已，并不做任何的事件绑定。所有的事件绑定都是在客户端进行的。为了避免客户端重复渲染，React提供了一套checksum的机制。所谓checksum，就是React在服务端渲染的时候，会为组件生成相应的校验和(checksum)，这样客户端React在处理同一个组件的时候，会复用服务端已生成的初始DOM，增量更新，这就是data-react-checksum的作用。</p> <p>所以，最终，我们的同构应该是这个样子的：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>// server 端  
+function* newsListController() {
+  
+  const data = yield this.getNews({params});
+
+  const data = {
+    'data': data
+  };
+  let news = ReactDOMServer.renderToString(News(data));
+  this.body = '&lt;!doctype html&gt;\n\
+    &lt;html&gt;\
+      &lt;head&gt;\
+          &lt;title&gt;react server render&lt;/title&gt;\
+      &lt;/head&gt;\
+      &lt;body&gt;&lt;div id=&quot;container&quot;&gt;' +
+          news +
+          '&lt;/div&gt;&lt;script&gt;var window.__INIT_DATA='+ JSON.stringify(data) +'&lt;/script&gt;&lt;script src=&quot;app.js&quot;&gt;&lt;/script&gt;\
+      &lt;/body&gt;\
+    &lt;/html&gt;';
+};
+
+// 客户端，app.js中  
+let data = JSON.parse(window.__INIT_DATA__);  
+ReactDom.render(&lt;News props={data} /&gt;, document.getElementById(&quot;container&quot;));
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br></div></div><h2 id="小结"><a href="#小结" aria-hidden="true" class="header-anchor">#</a> 小结</h2> <p>最近一直在做同构相关的东西，本文主要讨论react同构开发的基本原理和方式，作为一个引子，其中省去了很多细节问题。关于同构应用开发，其实有很多事情要做，比如node应用的发布、监控、日志管理，react组件是否满足同构要求的自动化检测等。这些事情都是后续要一步一步去做的，到时候也会做一些整理和积累。</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">5/13/2019, 3:05:16 PM</span></div></footer> <!----> </main></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/assets/js/app.1a92a99b.js" defer></script><script src="/assets/js/2.4bb95436.js" defer></script><script src="/assets/js/18.38e91cd9.js" defer></script><script src="/assets/js/9.60a9ad14.js" defer></script>
+  </body>
+</html>
